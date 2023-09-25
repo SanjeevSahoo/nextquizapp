@@ -40,16 +40,19 @@ create table t_frm_users
     user_name varchar(100) not null,
     email_id varchar(100),
     domain_id varchar(50) not null,
+    password varchar(50),    
     roles varchar(100),
-    organisation int not null,
-    location int not null,
-    department int not null,
+    org_id int not null,
+    loc_id int not null,
+    dept_id int not null,
     status varchar(25) not null,
     crt_by int,
-    crt_date date,
+    crt_date datetime,
     upd_by int,
-    upd_date date
+    upd_date datetime
 );
+
+insert into t_frm_users (id, user_name, email_id, domain_id, password, roles, org_id, loc_id, dept_id, status ) values (1, 'Sanjeev Sahoo', 'sanjeevs.ttl@tatamotors.com','sanjeevs.ttl', 'admin123', '["Admin", "Participant"]', 1, 1, 1, 'Acitve');
 
 -- Quiz
 
