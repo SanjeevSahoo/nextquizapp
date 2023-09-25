@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./globals.scss";
 import NextAuthProvider from "./NextAuthProvider";
 import type { Metadata } from "next";
 
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="relative w-screen h-screen overflow-hidden">
         <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>

@@ -11,6 +11,18 @@ const USER_LIST = [
     dept_id: "1",
     status: "Active",
   },
+  {
+    id: "2",
+    user_name: "Krishna Singh",
+    email_id: "krishnas.ttl",
+    domain_id: "krishnas.ttl",
+    password: "admin123",
+    roles: "['Participants']",
+    org_id: "1",
+    loc_id: "1",
+    dept_id: "1",
+    status: "Active",
+  },
 ];
 
 export default USER_LIST;
