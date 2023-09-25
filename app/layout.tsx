@@ -1,4 +1,5 @@
 import "./globals.css";
+import NextAuthProvider from "./NextAuthProvider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NextAuthProvider>{children}</NextAuthProvider>
+      </body>
     </html>
   );
 }
