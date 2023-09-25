@@ -5,7 +5,11 @@ const SocketHandler = (req, res) => {
     console.log("Socket is already running");
   } else {
     console.log("Socket is initializing");
-    const io = new Server(res.socket.server);
+    const io = new Server({
+      path: "/api/socket",
+      addTrailingSlash: false,
+      cors: { origin: "*" },
+    });
     res.socket.server.io = io;
   }
   res.end();
