@@ -2,39 +2,39 @@
 
 -- Organisation 
 
-create table t_frm_organisations
+create table t_quz_organisations
 (
     id int not null auto_increment primary key,
     name varchar(100) not null
 );
 
-insert into t_frm_organisations (id, name) values (1, 'Tata Motors');
-insert into t_frm_organisations (id, name) values (2, 'Tata Technologies');
+insert into t_quz_organisations (id, name) values (1, 'Tata Motors');
+insert into t_quz_organisations (id, name) values (2, 'Tata Technologies');
 
 -- Location
 
-create table t_frm_locations
+create table t_quz_locations
 (
     id int not null auto_increment primary key,
     name varchar(100) not null
 );
 
-insert into t_frm_locations (id, name) values (1, 'Jamshedpur');
-insert into t_frm_locations (id, name) values (2, 'Pune');
+insert into t_quz_locations (id, name) values (1, 'Jamshedpur');
+insert into t_quz_locations (id, name) values (2, 'Pune');
 
 -- Department
 
-create table t_frm_departments
+create table t_quz_departments
 (
     id int not null auto_increment primary key,
     name varchar(100) not null
 );
 
-insert into t_frm_departments (id, name) values (1, 'DPDS');
+insert into t_quz_departments (id, name) values (1, 'DPDS');
 
 -- Users
 
-create table t_frm_users
+create table t_quz_users
 (
     id INT not null auto_increment primary key,
     user_name varchar(100) not null,
@@ -52,7 +52,7 @@ create table t_frm_users
     upd_date datetime
 );
 
-insert into t_frm_users (id, user_name, email_id, domain_id, password, roles, org_id, loc_id, dept_id, status ) values (1, 'Sanjeev Sahoo', 'sanjeevs.ttl@tatamotors.com','sanjeevs.ttl', 'admin123', '["Admin", "Participant"]', 1, 1, 1, 'Acitve');
+insert into t_quz_users (id, user_name, email_id, domain_id, password, roles, org_id, loc_id, dept_id, status ) values (1, 'Sanjeev Sahoo', 'sanjeevs.ttl@tatamotors.com','sanjeevs.ttl', 'admin123', '["Admin", "Participant"]', 1, 1, 1, 'Acitve');
 
 -- Quiz
 
