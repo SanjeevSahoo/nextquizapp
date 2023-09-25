@@ -25,5 +25,7 @@ const USER_LIST = [
   },
 ];
 
-export default USER_LIST;
-export { USER_LIST };
+const NEXT_PUBLIC_SOCKET_SERVER_URL:string = process.env.NEXT_PUBLIC_SOCKET_SERVER_URL||"http://localhost:4000";
+
+
+export { USER_LIST ,NEXT_PUBLIC_SOCKET_SERVER_URL};

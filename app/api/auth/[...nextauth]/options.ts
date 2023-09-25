@@ -1,4 +1,4 @@
-import USER_LIST from "@/app/constants";
+import {USER_LIST} from "@/app/constants";
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
