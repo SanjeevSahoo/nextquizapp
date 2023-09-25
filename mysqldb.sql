@@ -65,6 +65,7 @@ create table t_frm_users
     -- - Closed
     -- - Result Released
     -- - Completed
+    -- - Discarded
     
 -- participant_type
     -- - Open for All
@@ -86,9 +87,9 @@ create table t_quz_quiz
     participant_location int,
     participant_department int,
     crt_by int not null,
-    crt_date date not null,
+    crt_date datetime not null,
     upd_by int,
-    upd_date date
+    upd_date datetime
 );
 
 -- Questions
@@ -111,9 +112,9 @@ create table t_quz_questions
     answer_timer_duration int not null,
     status varchar(25) not null,
     crt_by int not null,
-    crt_date date not null,
+    crt_date datetime not null,
     upd_by int,
-    upd_date date
+    upd_date datetime
 );
 
 -- Answers
@@ -121,4 +122,14 @@ create table t_quz_questions
 create table t_quz_answers
 (
     id INT not null auto_increment primary key,
+    quiz_id int not null,
+    participant_id int not null,
+    question_id int not null,
+    anwser varchar(255),
+    anwser_time datetime not null,
+    answer_correct varchar(10) not null,
+    crt_by int not null,
+    crt_date datetime not null,
+    upd_by int,
+    upd_date datetime
 );
